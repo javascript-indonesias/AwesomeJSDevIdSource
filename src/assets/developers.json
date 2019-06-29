@@ -1,0 +1,52 @@
+{
+  "data": [
+    {
+      "nama": "lorem",
+      "skill": "ipsum",
+      "github_alias": "ipsum",
+      "github_url": "ipsum",
+      "facebook_alias": "ipsum",
+      "facebook_url": "ipsum",
+      "twitter_alias": "ipsum",
+      "twitter_url": "ipsum",
+      "linkedin_alias": "ipsum",
+      "linkedin_url": "ipsum",
+      "blog_alias": "ipsum",
+      "blog_url": "ipsum",
+      "medium_alias": "ipsum",
+      "medium_url": "ipsum"
+    },
+    {
+      "nama": "lorem",
+      "skill": "ipsum",
+      "github_alias": "ipsum",
+      "github_url": "ipsum",
+      "facebook_alias": "ipsum",
+      "facebook_url": "ipsum",
+      "twitter_alias": "ipsum",
+      "twitter_url": "ipsum",
+      "linkedin_alias": "ipsum",
+      "linkedin_url": "ipsum",
+      "blog_alias": "ipsum",
+      "blog_url": "ipsum",
+      "medium_alias": "ipsum",
+      "medium_url": "ipsum"
+    },
+    {
+      "nama": "lorem",
+      "skill": "ipsum",
+      "github_alias": "ipsum",
+      "github_url": "ipsum",
+      "facebook_alias": "ipsum",
+      "facebook_url": "ipsum",
+      "twitter_alias": "ipsum",
+      "twitter_url": "ipsum",
+      "linkedin_alias": "ipsum",
+      "linkedin_url": "ipsum",
+      "blog_alias": "ipsum",
+      "blog_url": "ipsum",
+      "medium_alias": "ipsum",
+      "medium_url": "ipsum"
+    }
+  ]
+}

@@ -24,9 +24,30 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              {
+                "input": "custom-styles/bootstrap.css",
+                "bundleName": "bootstrap-style",
+                "lazy": true
+              },
+              {
+                "input": "./node_modules/@fortawesome/fontawesome-free/css/all.min.css",
+                "bundleName": "font-awe-style",
+                "lazy": true
+              }
             ],
-            "scripts": []
+            "scripts": [
+              {
+                "input": "./node_modules/jquery/dist/jquery.slim.min.js",
+                "bundleName": "jquery-js",
+                "lazy": true
+              },
+              {
+                "input": "./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
+                "bundleName": "bootstrap-js",
+                "lazy": true
+              }
+            ]
           },
           "configurations": {
             "production": {
