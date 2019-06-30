@@ -12,12 +12,12 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: '/search',
+    redirectTo: '/search-js-dev',
     pathMatch: 'full'
   },
   {
     path: '**',
-    redirectTo: '/search',
+    redirectTo: '/search-js-dev',
     pathMatch: 'full'
   }
 ];

@@ -1,0 +1,23 @@
+/* Ubah ke lazy load dengan service dan setelan di Angular CLI JSON */
+/* @import url("../../../../custom-styles/bootstrap.css");
+@import url("../../../../node_modules/@fortawesome/fontawesome-free/css/all.min.css"); */
+
+.cardmargin {
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+}
+
+.title-margin {
+  padding-left: 0.5em;
+  font-weight: bold;
+  color: #525252;
+}
+
+.brand-logo-color {
+  color: #f7b71d;
+}
+
+html,
+body {
+  background: #F0F2F4;
+}

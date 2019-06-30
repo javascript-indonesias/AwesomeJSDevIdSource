@@ -1,1 +1,22 @@
-<p>search-developer works!</p>
+<body>
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-md-6 m-auto">
+        <h3 class="text-center mb-3">
+          <i class="fab fa-js-square fa-lg brand-logo-color"></i><span class="title-margin">Awesome JS Dev Indonesia</span>
+        </h3>
+        <div class="card card-body mb-1">
+          <div class="form-group">
+            <input (keyup)="searchDeveloper($event.target.value)" [(ngModel)]="stringPencarian" type="text" id="search" class="form-control form-control-lg" placeholder="Masukkan nama pengembang...">
+          </div>
+        </div>
+        <div id="match-list">
+          <!-- <div class="card card-body mb-1 cardmargin" *ngFor="let bandara of listBandaraFilter; trackBy: trackByFunctions; let indx = index">
+            <h4>{{bandara.nama}} ({{bandara.iata}}) <span class="text-primary">{{bandara.kategori}}</span></h4>
+            <small>{{bandara.alamat}}</small>
+          </div> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</body>

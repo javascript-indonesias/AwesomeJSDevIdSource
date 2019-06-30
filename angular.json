@@ -32,7 +32,7 @@
               },
               {
                 "input": "./node_modules/@fortawesome/fontawesome-free/css/all.min.css",
-                "bundleName": "font-awe-style",
+                "bundleName": "fontawesome-style",
                 "lazy": true
               }
             ],
@@ -60,7 +60,7 @@
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
-              "extractCss": true,
+              "extractCss": false,
               "namedChunks": false,
               "aot": true,
               "extractLicenses": true,
