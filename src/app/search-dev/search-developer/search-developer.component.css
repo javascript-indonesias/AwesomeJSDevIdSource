@@ -17,6 +17,11 @@
   color: #f7b71d;
 }
 
+.block-awesome {
+  font-weight: bold;
+  color: #aa5c9f;
+}
+
 html,
 body {
   background: #F0F2F4;

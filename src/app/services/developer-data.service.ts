@@ -47,7 +47,7 @@ export class DeveloperDataService {
    * @param listDev array daftar pengembang
    * @param stringKataKunci kata kunci pencarian
    */
-  filterDataPengembang(listDev: any, stringKataKunci: string) {
+  filterDataPengembang(listDev: any, stringKataKunci: string): Observable<any> {
 
     const observableFilter = Observable.create((observer) => {
 
@@ -69,6 +69,8 @@ export class DeveloperDataService {
       .pipe(
         catchError(this.handleErrors)
       );
+
+    return observableFilter;
   }
 
 
