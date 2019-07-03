@@ -22,7 +22,11 @@
   color: #aa5c9f;
 }
 
+.fa-search {
+  color: #393e46
+}
+
 html,
 body {
-  background: #F0F2F4;
+  background: #F2F2F2;
 }

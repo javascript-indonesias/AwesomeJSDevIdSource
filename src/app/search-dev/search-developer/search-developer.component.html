@@ -2,32 +2,44 @@
   <div class="container mt-5">
     <div class="row">
       <div class="col-md-6 m-auto">
+
+        <!-- HEADER -->
         <h3 class="text-center mb-3">
           <i class="fab fa-js-square fa-lg brand-logo-color"></i><span class="title-margin">Awesome JS Dev
             Indonesia</span>
         </h3>
+
+        <!-- BOX PENCARIAN -->
         <div class="card card-body mb-1">
           <p class="lead">
-            Daftar pengembang atau developer JavaScript asal Indonesia yang <strong class="block-awesome">AWESOME</strong> . Silahkan cari dengan memasukkan kata kunci di kotak pencarian di bawah ini. Ingin menambahkan pengembang yang lain? <a href="/tentang-app">Cek disini</a>.
+            Daftar pengembang atau developer JavaScript asal Indonesia yang <strong
+              class="block-awesome">AWESOME</strong> . Silahkan cari dengan memasukkan kata kunci di kotak pencarian di
+            bawah ini. Ingin menambahkan pengembang yang lain? <a href="/tentang-app">Cek disini</a>.
           </p>
-          <div class="form-group mt-1">
-            <input (keyup)="searchDeveloper($event.target.value)" [(ngModel)]="stringPencarian" type="text" id="search"
-              class="form-control form-control-lg" placeholder="Masukkan nama pengembang...">
+
+
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text"><i class="fas fa-search"></i></span>
+            </div>
+            <input type="text" class="form-control" (keyup)="searchDeveloper($event.target.value)"
+              [(ngModel)]="stringPencarian" type="text" id="search" class="form-control form-control-lg"
+              placeholder="Masukkan nama pengembang...">
           </div>
         </div>
 
+
+        <!-- LIST CARD -->
         <div id="match-list">
-          <!-- LIST CARD -->
+
           <div class="card bg-light mb-3 cardmargin"
             *ngFor="let devitem of listPengembangFiltered; trackBy: trackListByFunctions; let indx = index">
-            <div class="card-header"><h4>Dark card title</h4></div>
             <div class="card-body">
-              <p class="card-text"><i class="fab fa-facebook-square fa-2x  align-middle"></i>Facebook Lorem Ipsum Dolor Sit</p>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                content.</p>
+              <h4 class="card-title">Light card title</h4>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                card's content.</p>
             </div>
           </div>
-
         </div>
       </div>
     </div>
