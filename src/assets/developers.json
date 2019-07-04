@@ -1,20 +1,20 @@
 {
   "data": [
     {
-      "nama": "lorem",
-      "skill": "ipsum",
-      "github_alias": "ipsum",
-      "github_url": "ipsum",
-      "facebook_alias": "ipsum",
-      "facebook_url": "ipsum",
-      "twitter_alias": "ipsum",
-      "twitter_url": "ipsum",
-      "linkedin_alias": "ipsum",
-      "linkedin_url": "ipsum",
-      "blog_alias": "ipsum",
-      "blog_url": "ipsum",
-      "medium_alias": "ipsum",
-      "medium_url": "ipsum"
+      "nama": "Ade Yahya Prasetyo",
+      "skill": "#React, #ReactNative, #NodeJs, GraphQL",
+      "github_alias": "@adeyahya",
+      "github_url": "https://github.com/adeyahya",
+      "facebook_alias": "Ade Yahya Prasetyo",
+      "facebook_url": "https://www.facebook.com/adeyahyap",
+      "twitter_alias": "@adeyahyap",
+      "twitter_url": "https://twitter.com/adeyahyap",
+      "linkedin_alias": "Ade Yahya Prasetyo",
+      "linkedin_url": "https://www.linkedin.com/in/adeyahyap/",
+      "blog_alias": "www.ihavemind.com",
+      "blog_url": "https://www.ihavemind.com/",
+      "medium_alias": "@adeyahya",
+      "medium_url": "https://medium.com/@adeyahya"
     },
     {
       "nama": "lorem",

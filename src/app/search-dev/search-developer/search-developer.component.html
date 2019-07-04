@@ -26,18 +26,38 @@
               [(ngModel)]="stringPencarian" type="text" id="search" class="form-control form-control-lg"
               placeholder="Masukkan nama pengembang...">
           </div>
+
+          <!-- PROGRESS MEMUAT HALAMAN -->
+          <div class="d-flex justify-content-center" *ngIf="isProgressBarShowed">
+            <div class="spinner-grow text-danger" role="status">
+              <!-- <span class="sr-only">Loading...</span> -->
+            </div>
+            <div class="spinner-grow text-danger" role="status">
+              <!-- <span class="sr-only">Loading...</span> -->
+            </div>
+            <div class="spinner-grow text-danger" role="status">
+              <!-- <span class="sr-only">Loading...</span> -->
+            </div>
+          </div>
         </div>
 
 
         <!-- LIST CARD -->
         <div id="match-list">
 
-          <div class="card bg-light mb-3 cardmargin"
+          <div class="card bg-light border-secondary mb-3 cardmargin"
             *ngFor="let devitem of listPengembangFiltered; trackBy: trackListByFunctions; let indx = index">
             <div class="card-body">
-              <h4 class="card-title">Light card title</h4>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                card's content.</p>
+              <h4 class="card-title">{{devitem.stringNama}}</h4>
+              <p class="card-text">
+                <span>Skill {{devitem.stringSkill}} . </span>
+                <span>Github profile <a href="{{devitem.stringGithubUrl}}"> {{devitem.stringGithubAlias}}</a> . </span>
+                <span>Facebook profile <a href="{{stringFacebookUrl}}">{{devitem.stringFacebookAlias}}</a> . </span>
+                <span>Twitter profile  <a href="{{devitem.stringTwitterUrl}}">{{devitem.stringTwitterAlias}}</a> . </span>
+                <span>LinkedIn profile <a href="{{devitem.stringLinkedInUrl}}">{{devitem.stringLinkedinAlias}}</a> . </span>
+                <span>Blog homepage <a href="{{devitem.stringBlogUrl}}">{{devitem.stringBlogAlias}}</a> . </span>
+                <span>Medium profile <a href="{{devitem.stringMediumUrl}}">{{devitem.stringMediumAlias}}</a> . </span>
+              </p>
             </div>
           </div>
         </div>

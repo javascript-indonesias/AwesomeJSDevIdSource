@@ -22,6 +22,8 @@ export class SearchDeveloperComponent implements OnInit, OnDestroy {
 
   private searchTextSubject$ = new Subject<string>();
 
+  isProgressBarShowed = false;
+
   constructor(
     private readonly loaders: LibraryLoadersService,
     @Inject(DOCUMENT) private readonly document: any,
