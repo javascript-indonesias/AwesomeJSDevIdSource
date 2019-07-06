@@ -13,13 +13,23 @@
   color: #525252;
 }
 
+.name-theme {
+  color: #393e46;
+  font-weight: bold;
+}
+
+.paragraph-theme a {
+  color: #239d60;
+  font-weight: 800;
+}
+
 .brand-logo-color {
   color: #f7b71d;
 }
 
 .block-awesome {
   font-weight: bold;
-  color: #aa5c9f;
+  color: #f08a5d;
 }
 
 .fa-search {

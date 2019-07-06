@@ -18,10 +18,16 @@ export class LibraryLoadersService {
    */
   loadBootstrapLibrary(): Observable<any> {
     return forkJoin([
+
+      // untuk produksi
       // this.loadStyle('bootstrap-style.css'),
       // this.loadStyle('fontawesome-style.css'),
+
+      // untuk development
       this.loadScript('bootstrap-style.js'),
       this.loadScript('fontawesome-style.js'),
+
+      // muat library pihak ketiga
       this.loadScript('jquery-js.js'),
       this.loadScript('bootstrap-js.js')
     ]);

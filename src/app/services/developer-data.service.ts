@@ -53,12 +53,22 @@ export class DeveloperDataService {
 
         const regex = new RegExp(`^${stringKataKunci}`, 'gi');
 
-        return developer.stringNama.match(regex) || developer.stringSkill.match(regex) ||
-        developer.stringGithubAlias.match(regex) || developer.stringFacebookAlias.match(regex) ||
-        developer.stringTwitterAlias.match(regex) ||
-        developer.stringLinkedinAlias.match(regex) ||
-        developer.stringBlogAlias.match(regex) ||
-        developer.stringMediumAlias.match(regex);
+        return developer.stringNama.toLowerCase().match(regex)
+        || developer.stringNama.includes(stringKataKunci)
+        || developer.stringSkill.toLowerCase().match(regex)
+        || developer.stringSkill.toLowerCase().includes(stringKataKunci)
+        || developer.stringGithubAlias.toLowerCase().match(regex)
+        || developer.stringGithubAlias.toLowerCase().includes(stringKataKunci)
+        || developer.stringFacebookAlias.toLowerCase().match(regex)
+        || developer.stringFacebookAlias.toLowerCase().includes(stringKataKunci)
+        || developer.stringTwitterAlias.toLowerCase().match(regex)
+        || developer.stringTwitterAlias.toLowerCase().includes(stringKataKunci)
+        || developer.stringLinkedinAlias.toLowerCase().match(regex)
+        || developer.stringLinkedinAlias.toLowerCase().includes(stringKataKunci)
+        || developer.stringBlogAlias.toLowerCase().match(regex)
+        || developer.stringBlogAlias.toLowerCase().includes(stringKataKunci)
+        || developer.stringMediumAlias.toLowerCase().match(regex)
+        || developer.stringMediumAlias.toLowerCase().includes(stringKataKunci);
       });
 
       observer.next(listDeveloperFilter);

@@ -1,7 +1,7 @@
 <body>
   <div class="container mt-5">
     <div class="row">
-      <div class="col-md-6 m-auto">
+      <div class="col-md-8 m-auto">
 
         <!-- HEADER -->
         <h3 class="text-center mb-3">
@@ -13,7 +13,8 @@
         <div class="card card-body mb-1">
           <p class="lead">
             Daftar pengembang atau developer JavaScript asal Indonesia yang <strong
-              class="block-awesome">AWESOME</strong> . Silahkan cari dengan memasukkan kata kunci di kotak pencarian di bawah ini. Ingin menambahkan pengembang yang lain? <a href="/tentang-app">Cek disini</a>.
+              class="block-awesome">AWESOME</strong> . Silahkan cari dengan memasukkan kata kunci di kotak pencarian di
+            bawah ini. Ingin menambahkan pengembang yang lain? Silahkan <a href="/tentang-app">cek disini</a>.
           </p>
 
 
@@ -47,15 +48,27 @@
           <div class="card bg-light border-secondary mb-3 cardmargin"
             *ngFor="let devitem of listPengembangFiltered; trackBy: trackListByFunctions; let indx = index">
             <div class="card-body">
-              <h4 class="card-title">{{devitem.stringNama}}</h4>
-              <p class="card-text">
-                <span>Skill {{devitem.stringSkill}} . </span>
-                <span>Github profile <a href="{{devitem.stringGithubUrl}}"> {{devitem.stringGithubAlias}}</a> . </span>
-                <span>Facebook profile <a href="{{devitem.stringFacebookUrl}}">{{devitem.stringFacebookAlias}}</a> . </span>
-                <span>Twitter profile  <a href="{{devitem.stringTwitterUrl}}">{{devitem.stringTwitterAlias}}</a> . </span>
-                <span>LinkedIn profile <a href="{{devitem.stringLinkedInUrl}}">{{devitem.stringLinkedinAlias}}</a> . </span>
-                <span>Blog homepage <a href="{{devitem.stringBlogUrl}}">{{devitem.stringBlogAlias}}</a> . </span>
-                <span>Medium profile <a href="{{devitem.stringMediumUrl}}">{{devitem.stringMediumAlias}}</a> . </span>
+              <h4 class="card-title name-theme">{{devitem.stringNama}}</h4>
+              <p class="card-text paragraph-theme">
+                <span *ngIf="checkItemShowed(devitem.stringSkill)">Skill {{devitem.stringSkill}} . </span>
+                <span *ngIf="checkItemShowed(devitem.stringGithubUrl)">Github profile <a
+                    href="{{devitem.stringGithubUrl}}" target="_blank"> {{devitem.stringGithubAlias}}</a> .
+                </span>
+                <span *ngIf="checkItemShowed(devitem.stringFacebookUrl)">Facebook profile <a
+                    href="{{devitem.stringFacebookUrl}}" target="_blank">{{devitem.stringFacebookAlias}}</a> .
+                </span>
+                <span *ngIf="checkItemShowed(devitem.stringTwitterAlias)">Twitter profile <a
+                    href="{{devitem.stringTwitterUrl}}" target="_blank">{{devitem.stringTwitterAlias}}</a> .
+                </span>
+                <span *ngIf="checkItemShowed(devitem.stringLinkedInUrl)">LinkedIn profile <a
+                    href="{{devitem.stringLinkedInUrl}}" target="_blank">{{devitem.stringLinkedinAlias}}</a> .
+                </span>
+                <span *ngIf="checkItemShowed(devitem.stringBlogAlias)">Blog homepage <a href="{{devitem.stringBlogUrl}}"
+                    target="_blank">{{devitem.stringBlogAlias}}</a> .
+                </span>
+                <span *ngIf="checkItemShowed(devitem.stringMediumUrl)">Medium profile <a
+                    href="{{devitem.stringMediumUrl}}" target="_blank">{{devitem.stringMediumAlias}}</a> .
+                </span>
               </p>
             </div>
           </div>

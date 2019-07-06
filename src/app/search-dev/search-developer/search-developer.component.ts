@@ -37,6 +37,7 @@ export class SearchDeveloperComponent implements OnInit, OnDestroy {
       }
     );
 
+    this.showProgress(false);
     this.subscriptions = new Subscription();
 
     this.getDataDevelopers();
@@ -48,15 +49,18 @@ export class SearchDeveloperComponent implements OnInit, OnDestroy {
    */
   getDataDevelopers() {
 
+    this.showProgress(true);
     const subs = this.dataservice.getDataDevelopers()
       .subscribe((devResult: DeveloperResult) => {
 
         this.listPengembang = devResult.listDeveloperArray;
         this.listPengembangFiltered = devResult.listDeveloperArray;
+        this.showProgress(false);
       },
         (errors) => {
           console.log(errors);
           this.listPengembangFiltered = this.listPengembang;
+          this.showProgress(false);
         });
 
     this.subscriptions.add(subs);
@@ -68,7 +72,8 @@ export class SearchDeveloperComponent implements OnInit, OnDestroy {
    * @param katakunci String kata kunci pencarian
    */
   searchDeveloper(katakunci: string = '') {
-    this.searchTextSubject$.next(katakunci);
+    this.showProgress(true);
+    this.searchTextSubject$.next(katakunci.toLowerCase());
   }
 
 
@@ -90,8 +95,10 @@ export class SearchDeveloperComponent implements OnInit, OnDestroy {
         } else {
           this.listPengembangFiltered = [];
         }
+        this.showProgress(false);
       },
       (error) => {
+        this.showProgress(false);
         console.log(error);
       }
     );
@@ -115,14 +122,20 @@ export class SearchDeveloperComponent implements OnInit, OnDestroy {
 
 
   checkItemShowed(valueCheck: any): boolean {
-    if (!valueCheck && valueCheck.length > 0) {
+    if (valueCheck && valueCheck.length > 0) {
       return true;
     } else {
       return false;
     }
   }
 
-
+  showProgress(isshow: boolean) {
+    if (isshow) {
+      this.isProgressBarShowed = true;
+    } else {
+      this.isProgressBarShowed = false;
+    }
+  }
 
   ngOnDestroy() {
     this.subscriptions.unsubscribe();
