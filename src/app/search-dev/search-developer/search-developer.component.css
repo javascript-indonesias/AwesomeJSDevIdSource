@@ -1,0 +1,42 @@
+/* Ubah ke lazy load dengan service dan setelan di Angular CLI JSON */
+/* @import url("../../../../custom-styles/bootstrap.css");
+@import url("../../../../node_modules/@fortawesome/fontawesome-free/css/all.min.css"); */
+
+.cardmargin {
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+}
+
+.title-margin {
+  padding-left: 0.5em;
+  font-weight: bold;
+  color: #525252;
+}
+
+.name-theme {
+  color: #393e46;
+  font-weight: bold;
+}
+
+.paragraph-theme a {
+  color: #239d60;
+  font-weight: 800;
+}
+
+.brand-logo-color {
+  color: #f7b71d;
+}
+
+.block-awesome {
+  font-weight: bold;
+  color: #f08a5d;
+}
+
+.fa-search {
+  color: #393e46
+}
+
+html,
+body {
+  background: #F2F2F2;
+}

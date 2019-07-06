@@ -28,24 +28,28 @@
               {
                 "input": "custom-styles/bootstrap.css",
                 "bundleName": "bootstrap-style",
-                "lazy": true
+                "lazy": true,
+                "inject": true
               },
               {
                 "input": "./node_modules/@fortawesome/fontawesome-free/css/all.min.css",
-                "bundleName": "font-awe-style",
-                "lazy": true
+                "bundleName": "fontawesome-style",
+                "lazy": true,
+                "inject": true
               }
             ],
             "scripts": [
               {
                 "input": "./node_modules/jquery/dist/jquery.slim.min.js",
                 "bundleName": "jquery-js",
-                "lazy": true
+                "lazy": true,
+                "inject": true
               },
               {
                 "input": "./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
                 "bundleName": "bootstrap-js",
-                "lazy": true
+                "lazy": true,
+                "inject": true
               }
             ]
           },
@@ -64,7 +68,7 @@
               "namedChunks": false,
               "aot": true,
               "extractLicenses": true,
-              "vendorChunk": false,
+              "vendorChunk": true,
               "buildOptimizer": true,
               "budgets": [
                 {

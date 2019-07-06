@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { AboutappsRoutingModule } from './aboutapps-routing.module';
 import { AboutAplikasiComponent } from './about-aplikasi/about-aplikasi.component';
 
+
 @NgModule({
   declarations: [AboutAplikasiComponent],
   imports: [
