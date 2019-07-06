@@ -28,7 +28,7 @@
             "styles": [
               "src/styles.css",
               {
-                "input": "custom-styles/bootstrap.css",
+                "input": "custom-styles/bootstrap.min.css",
                 "bundleName": "bootstrap-style",
                 "lazy": true,
                 "inject": true
