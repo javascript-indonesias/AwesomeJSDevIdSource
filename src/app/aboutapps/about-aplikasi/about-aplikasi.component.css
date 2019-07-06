@@ -1,0 +1,31 @@
+html,
+body {
+  background: #F2F2F2;
+}
+
+.block-awesome {
+  font-weight: bold;
+  color: #f08a5d;
+}
+
+.title-margin {
+  padding-left: 0.5em;
+  font-weight: bold;
+  color: #525252;
+}
+
+.version-theme {
+  font-weight: bold;
+  color: #929aab;
+}
+
+.brand-logo-color {
+  color: #f7b71d;
+}
+
+hr {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  border: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}

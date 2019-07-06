@@ -1,5 +1,4 @@
 import { Component, OnInit, Inject, OnDestroy } from '@angular/core';
-import { LibraryLoadersService } from 'src/app/services/library-loaders.service';
 import { DOCUMENT } from '@angular/common';
 import { DeveloperItem } from 'src/app/models/DeveloperItem';
 import { Subscription, Subject } from 'rxjs';
@@ -25,17 +24,11 @@ export class SearchDeveloperComponent implements OnInit, OnDestroy {
   isProgressBarShowed = false;
 
   constructor(
-    private readonly loaders: LibraryLoadersService,
     @Inject(DOCUMENT) private readonly document: any,
     private readonly dataservice: DeveloperDataService
   ) { }
 
   ngOnInit() {
-    this.loaders.loadBootstrapLibrary().subscribe(
-      (_: any) => {
-        console.log('library loaded');
-      }
-    );
 
     this.showProgress(false);
     this.subscriptions = new Subscription();
