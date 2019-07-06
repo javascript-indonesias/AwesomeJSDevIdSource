@@ -31,7 +31,6 @@ export class SearchDeveloperComponent implements OnInit, OnDestroy {
   ) { }
 
   ngOnInit() {
-
     this.loaders.loadBootstrapLibrary().subscribe(
       (_: any) => {
         console.log('library loaded');
@@ -44,6 +43,9 @@ export class SearchDeveloperComponent implements OnInit, OnDestroy {
     this.searchFilterSubjectInit();
   }
 
+  /**
+   * @description Ambil data dari JSON lokal berisi daftar pengembang
+   */
   getDataDevelopers() {
 
     const subs = this.dataservice.getDataDevelopers()
@@ -60,10 +62,19 @@ export class SearchDeveloperComponent implements OnInit, OnDestroy {
     this.subscriptions.add(subs);
   }
 
+
+  /**
+   * @description Cari developer dengan kata kunci pencarian yang dimasukkan
+   * @param katakunci String kata kunci pencarian
+   */
   searchDeveloper(katakunci: string = '') {
     this.searchTextSubject$.next(katakunci);
   }
 
+
+  /**
+   * Inisialisasi filter RxJS untuk pencarian berdasarkan input
+   */
   searchFilterSubjectInit() {
 
     const subs = this.searchTextSubject$.pipe(
@@ -88,12 +99,20 @@ export class SearchDeveloperComponent implements OnInit, OnDestroy {
     this.subscriptions.add(subs);
   }
 
+
+  /**
+   * @description Track baris list yang ditampilkan
+   * @param index Indeks data
+   * @param item Item yang akan di track di dalam list
+   */
   trackListByFunctions(index: any, item: any) {
     if (!item) {
       return null;
     }
     return item.stringNama;
   }
+
+
 
   checkItemShowed(valueCheck: any): boolean {
     if (!valueCheck && valueCheck.length > 0) {
@@ -102,6 +121,8 @@ export class SearchDeveloperComponent implements OnInit, OnDestroy {
       return false;
     }
   }
+
+
 
   ngOnDestroy() {
     this.subscriptions.unsubscribe();

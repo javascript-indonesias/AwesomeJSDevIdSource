@@ -2,12 +2,6 @@ import { Injectable, Inject } from '@angular/core';
 import { ReplaySubject, Observable, forkJoin } from 'rxjs';
 import { DOCUMENT } from '@angular/common';
 
-
-/**
- * NOTE: on build we use --extract-css=false to generate .js files that
- * contain JS or CSS in JS .
- * Or set  "extractCss": false in angular.json file.
- */
 @Injectable({
   providedIn: 'root'
 })
@@ -15,13 +9,17 @@ export class LibraryLoadersService {
 
   private loadedLibraries: { [url: string]: ReplaySubject<any> } = {};
 
+
   constructor(@Inject(DOCUMENT) private readonly document: any) { }
 
   /**
    * @description Load data library secara asinkronus deferred
+   * Ketika produksi, gunakan loadstyle untuk memuat Style CSS
    */
   loadBootstrapLibrary(): Observable<any> {
     return forkJoin([
+      // this.loadStyle('bootstrap-style.css'),
+      // this.loadStyle('fontawesome-style.css'),
       this.loadScript('bootstrap-style.js'),
       this.loadScript('fontawesome-style.js'),
       this.loadScript('jquery-js.js'),
@@ -82,5 +80,4 @@ export class LibraryLoadersService {
 
     return this.loadedLibraries[url].asObservable();
   }
-
 }

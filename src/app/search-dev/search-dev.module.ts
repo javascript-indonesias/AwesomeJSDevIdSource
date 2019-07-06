@@ -7,6 +7,7 @@ import { SearchDeveloperComponent } from './search-developer/search-developer.co
 import { DeveloperDataService } from '../services/developer-data.service';
 import { LibraryLoadersService } from '../services/library-loaders.service';
 
+
 @NgModule({
   declarations: [SearchDeveloperComponent],
   imports: [

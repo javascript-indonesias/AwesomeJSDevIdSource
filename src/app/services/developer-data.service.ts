@@ -6,7 +6,6 @@ import { map, catchError } from 'rxjs/operators';
 import { DeveloperItem } from '../models/DeveloperItem';
 import { DeveloperResult } from '../models/DeveloperResult';
 
-
 @Injectable({
   providedIn: 'root'
 })
@@ -15,7 +14,6 @@ export class DeveloperDataService {
   private urlRequest = 'assets/developers.json';
 
   constructor(private http: HttpClient) { }
-
 
   /**
    * @description Ambil data daftar pengembang dari JSON lokal
