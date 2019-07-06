@@ -31,7 +31,6 @@ export class LogUpdateService {
   updateApps() {
     // force update
     this.updates.activateUpdate().then(() => document.location.reload())
-      .catch((error) => console.log(error));
   }
 
   runIntervalCheckingUpdate() {

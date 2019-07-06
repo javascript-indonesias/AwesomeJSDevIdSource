@@ -18,6 +18,7 @@
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
+            "extractCss": true,
             "aot": false,
             "assets": [
               "src/favicon.ico",
@@ -62,6 +63,7 @@
                   "with": "src/environments/environment.prod.ts"
                 }
               ],
+              "baseHref": "/awesome-js-dev-indonesia/",
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
@@ -140,6 +142,43 @@
           "configurations": {
             "production": {
               "devServerTarget": "AwesomeJSDevId:serve:production"
+            }
+          }
+        },
+        "server": {
+          "builder": "@angular-devkit/build-angular:server",
+          "options": {
+            "outputPath": "dist/AwesomeJSDevId-server",
+            "main": "src/main.server.ts",
+            "tsConfig": "tsconfig.server.json"
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                }
+              ],
+              "sourceMap": false,
+              "optimization": {
+                "scripts": false,
+                "styles": true
+              }
+            }
+          }
+        },
+        "app-shell": {
+          "builder": "@angular-devkit/build-angular:app-shell",
+          "options": {
+            "browserTarget": "AwesomeJSDevId:build",
+            "serverTarget": "AwesomeJSDevId:server",
+            "route": "shell"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "AwesomeJSDevId:build:production",
+              "serverTarget": "AwesomeJSDevId:server:production"
             }
           }
         }

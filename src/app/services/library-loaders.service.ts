@@ -20,12 +20,12 @@ export class LibraryLoadersService {
     return forkJoin([
 
       // untuk produksi
-      // this.loadStyle('bootstrap-style.css'),
-      // this.loadStyle('fontawesome-style.css'),
+      this.loadStyle('bootstrap-style.css'),
+      this.loadStyle('fontawesome-style.css'),
 
       // untuk development
-      this.loadScript('bootstrap-style.js'),
-      this.loadScript('fontawesome-style.js'),
+      // this.loadScript('bootstrap-style.js'),
+      // this.loadScript('fontawesome-style.js'),
 
       // muat library pihak ketiga
       this.loadScript('jquery-js.js'),

@@ -1,13 +1,14 @@
 {
   "name": "Awesome JS Developer Indonesia",
   "short_name": "AwesomeJSDevId",
+  "description": "Aplikasi web sederhana yang berisi daftar developer dan programmer JavaScript dari Indonesia yang Awesome",
   "theme_color": "#f7b71d",
   "background_color": "#f7b71d",
   "display": "standalone",
+  "orientation": "portrait",
   "scope": "/",
   "start_url": "/",
-  "icons": [
-    {
+  "icons": [{
       "src": "assets/icons/ic_launcher.png",
       "sizes": "72x72",
       "type": "image/png"
