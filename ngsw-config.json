@@ -1,0 +1,54 @@
+{
+  "$schema": "./node_modules/@angular/service-worker/config/schema.json",
+  "index": "/index.html",
+  "appData": {
+    "version": "1.0.0",
+    "changelog": "Release awal aplikasi AwesomeJSDevID"
+  },
+  "assetGroups": [{
+    "name": "app",
+    "installMode": "prefetch",
+    "updateMode": "prefetch",
+    "resources": {
+      "files": [
+        "/favicon.ico",
+        "/index.html",
+        "/**/*.html",
+        "/*.css",
+        "/**/*.css",
+        "/*.js",
+        "/**/*.js"
+      ],
+      "urls": [
+        "https://fonts.googleapis.com/**"
+      ]
+    }
+  }, {
+    "name": "assets",
+    "installMode": "prefetch",
+    "updateMode": "prefetch",
+    "resources": {
+      "files": [
+        "/assets/**",
+        "/*.(eot|svg|cur|jpg|png|webp|gif|otf|ttf|woff|woff2|ani)"
+      ],
+      "urls": [
+        "https://fonts.googleapis.com/**"
+      ]
+    }
+  }],
+  "dataGroups": [{
+    "name": "from-static",
+    "version": 1,
+    "urls": [
+      "assets/developers.json",
+      "/developers.json"
+    ],
+    "cacheConfig": {
+      "strategy": "performance",
+      "maxSize": 10,
+      "maxAge": "6h",
+      "timeout": "10m"
+    }
+  }]
+}
