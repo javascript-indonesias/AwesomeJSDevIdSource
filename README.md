@@ -1,5 +1,18 @@
 # AwesomeJSDevId
 
+[![N|Solid](https://cldup.com/dTxpPi9lDf.thumb.png)](https://nodesource.com/products/nsolid)
+
+[![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
+
+
+Aplikasi web sederhana yang berisi daftar developer dan programmer JavaScript dari Indonesia yang AWESOME, menarik untuk di follow , dan tempat belajar . Data-data ini bersumber dari repository Github Awesome JS Dev ID yang dapat diakses disini [Github Repository https://github.com/mazipan/awesome-js-dev-id](https://github.com/mazipan/awesome-js-dev-id) . Jika ingin menambahkan data atau melakukan koreksi data, silahkan lakukan koreksi dengan Pull Request ke repository tersebut.
+
+Demo aplikasi web ini dapat diakses di tautan [https://javascript-indonesias.github.io/awesome-js-dev-indonesia/](https://javascript-indonesias.github.io/awesome-js-dev-indonesia/)
+
+---
+
+## For More Information
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.1.0.
 
 ## Development server
