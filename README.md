@@ -12,7 +12,9 @@ Atau bisa juga versi PWA nya di sini [https://awesome-js-dev-indonesia.gulajavam
 
 ## Preview
 
-![Image of App Preview](https://raw.githubusercontent.com/javascript-indonesias/AwesomeJSDevIdSource/master/previewpage.png)
+![ImageOfAppPreview](https://raw.githubusercontent.com/javascript-indonesias/AwesomeJSDevIdSource/master/previewpage.png)
+
+![PWATesting](https://raw.githubusercontent.com/javascript-indonesias/AwesomeJSDevIdSource/master/pwatest.png)
 
 ---
 
