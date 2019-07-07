@@ -8,6 +8,8 @@ Aplikasi web sederhana yang berisi daftar developer dan programmer JavaScript da
 
 Demo aplikasi web ini dapat diakses di tautan [https://javascript-indonesias.github.io/awesome-js-dev-indonesia/](https://javascript-indonesias.github.io/awesome-js-dev-indonesia/)
 
+Atau bisa juga versi PWA nya di sini [https://awesome-js-dev-indonesia.gulajavaministudio.now.sh](https://awesome-js-dev-indonesia.gulajavaministudio.now.sh)
+
 ## Preview
 
 ![Image of App Preview](https://raw.githubusercontent.com/javascript-indonesias/AwesomeJSDevIdSource/master/previewpage.png)
