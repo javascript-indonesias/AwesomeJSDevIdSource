@@ -12,11 +12,17 @@
         <!-- BOX PENCARIAN -->
         <div class="card card-body mb-1">
           <p class="lead">
-            Daftar developer dan programmer JavaScript dari Indonesia yang <strong
-              class="block-awesome">AWESOME</strong> . Silahkan cari dengan memasukkan kata kunci di kotak pencarian di
-            bawah ini. Ingin menambahkan pengembang yang lain? Silahkan <a routerLink="/tentang-app">cek disini</a>.
+            A list of <strong class="block-awesome">AWESOME</strong> JavaScript developers and programmers from
+            Indonesia , which are interesting to follow and become places of learning. Please search by entering
+            keywords in the search box below. Want to add another developer? Please <a routerLink="/tentang-app">check
+              here</a>.
           </p>
-
+          <!-- <p class="lead">
+            Daftar developer dan programmer JavaScript dari Indonesia yang <strong
+              class="block-awesome">AWESOME</strong> , yang menarik untuk diikuti dan menjadi tempat pembelajaran.
+            Silahkan cari dengan memasukkan kata kunci di kotak pencarian di bawah ini. Ingin menambahkan pengembang
+            yang lain? Silahkan <a routerLink="/tentang-app">cek disini</a>.
+          </p> -->
 
           <div class="input-group mb-3">
             <div class="input-group-prepend">
@@ -24,7 +30,7 @@
             </div>
             <input type="text" class="form-control" (keyup)="searchDeveloper($event.target.value)"
               [(ngModel)]="stringPencarian" type="text" id="search" class="form-control form-control-lg"
-              placeholder="Masukkan nama pengembang...">
+              placeholder="Insert the keywords...">
           </div>
 
           <!-- PROGRESS MEMUAT HALAMAN -->
